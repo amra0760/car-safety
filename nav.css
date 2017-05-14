@@ -16,7 +16,6 @@
     .navbar-default .navbar-header .navbar-brand:hover,
     .navbar-default .navbar-header .navbar-brand:focus {
         color: #eb3812;
-        font-size: 1px;
     }
     .navbar-default .navbar-header .navbar-toggle {
         font-weight: 700;
@@ -73,8 +72,8 @@
     }
     .navbar-default.affix .navbar-header .navbar-brand {
         color: #F05F40;
-        font-size: 24px;
-        font-weight: 750;
+        font-size: 23px;
+        font-weight: bold;
     }
     .navbar-default.affix .navbar-header .navbar-brand:hover,
     .navbar-default.affix .navbar-header .navbar-brand:focus {
@@ -134,7 +133,7 @@
     .navbar-default.affix .navbar-header .navbar-brand {
         color: #F05F40;
         font-size: 26px;
-        font-weight: 750;
+        font-weight: bold;
     }
     .navbar-default.affix .navbar-header .navbar-brand:hover,
     .navbar-default.affix .navbar-header .navbar-brand:focus {
@@ -188,7 +187,7 @@
     }
     .navbar-default.affix .navbar-header .navbar-brand {
         color: #F05F40;
-        font-size: 28px;
+        font-size: 25px;
         font-weight: 750;
     }
     .navbar-default.affix .navbar-header .navbar-brand:hover,

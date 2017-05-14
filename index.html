@@ -61,24 +61,6 @@
                     top: 100
                 }
             })
-
-            // Initialize and Configure Scroll Reveal Animation
-            window.sr = ScrollReveal();
-            sr.reveal('.sr-icons', {
-                duration: 600,
-                scale: 0.3,
-                distance: '0px'
-            }, 200);
-            sr.reveal('.sr-button', {
-                duration: 1000,
-                delay: 200
-            });
-            sr.reveal('.sr-contact', {
-                duration: 600,
-                scale: 0.3,
-                distance: '0px'
-            }, 300);
-
         });
     </script>
 </head>
@@ -128,8 +110,8 @@
         <!-- /.container-fluid -->
     </nav>
 
-    <div id="home">
-        <h1> Home <span class="glyphicon glyphicon-home"></span></h1>
+    <div class="container" id="home">
+        <h1 id="homeH1"> Home <span class="glyphicon glyphicon-home"></span></h1>
         <h2>Click it or Ticket</h2>
         <h4><strong>Has your child ever asked you to get their license?</strong></h4>
         <h4><strong>Have you been driving for a long time?</strong></h4>
@@ -137,9 +119,9 @@
         <p>If you answered <strong>yes</strong> to any of these questions, then you obviously are scared for your loved ones. On this site we’ll teach you tips, tricks, and stats to ensure you and others are safe on the road. </p>
     </div>
 
-    <div id="facts">
+    <div class="container" id="facts">
         <ul>
-            <h1> Car Safety Facts</h1>
+            <h1> Car Safety Facts <span class="glyphicon glyphicon-info-sign"></span></h1>
             <h3> Here are some facts and stats about care safety</h3>
             <li>
                 <p>The safest spot in the car is the middle seat in the back</p>
@@ -159,7 +141,7 @@
         </ul>
     </div>
 
-    <div id="tips">
+    <div class="container" id="tips">
         <ul>
             <h1> Car Tips & Tricks</h1>
             <h2>Teens</h2>
@@ -205,8 +187,8 @@
     </div>
 
 
-    <div id="gallery">
-        <h2>Gallery</h2>
+    <div class="container" id="gallery">
+        <h2>Gallery <span class="glyphicon glyphicon-picture"></h2>
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
             <ol class="carousel-indicators">
@@ -243,19 +225,21 @@
         </div>
     </div>
 
-
-
-    <footer id="contact">
-        <div class="container">
-            <h2 class="contacts"><a href="#contacts">Contact Us<span class="	glyphicon glyphicon-phone"></span></a></h2>
-            <h3>Want more info? Have any questions?</h3>
-            <p class="contacts">Car Safety.Inc.</p>
-            <p class="contacts"><span class="	glyphicon glyphicon-home"></span> 2468 Car Lane</p>
-            <p class="contacts">Somewhere, DR 90211</p>
-            <p class="contacts"> Phone <span class="glyphicon glyphicon glyphicon-earphone"></span>: 1 (800) CAR-SAFE </p>
+    <footer id="contacts">
+        <div class="container" id="contact">
+            <h2 class="contacts">Contact Us<span class="glyphicon glyphicon-phone"></span></h2>
+        <h4>Want more info? Have any questions?</h4>
+        <div class="col-sm-6">
+            <p class="contacts address">Car Safety.Inc.</p>
+            <p class="contacts address"><span class="	glyphicon glyphicon-map-marker"></span> 2468 Car Lane</p>
+            <p class="contacts address">Somewhere, DR 90211</p>
         </div>
-        <p class="contacts">Copyright © 2017 | CARSAFETY</p>
+        <div class="col-sm-6">
+            <p class="contacts number"> Phone <span class="glyphicon glyphicon glyphicon-earphone"></span>: 1 (800) CAR-SAFE </p>
+        </div>
+        </div>
     </footer>
+    <div class="container-fluid" id="copyright"><p><strong>Copyright © 2017 | CARSAFETY</strong></p></div>
 
 </body>
 
