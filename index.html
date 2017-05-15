@@ -20,15 +20,54 @@
     <link href='https://fonts.googleapis.com/css?family=Nothing+You+Could+Do' rel='stylesheet' type='text/css'>
     <!--slogan-->
     <link href='https://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
+    <!-- Theme CSS -->
+    <link href="css/creative.min.css" rel="stylesheet">
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.js"></script>
+
 
 
     <!--custom-->
     <link rel="stylesheet" href="custom.css">
     <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="gallery.css">
     <script src="script.js"></script>
+
+    <script>
+        $(document).ready(function() {
+
+            // jQuery for page scrolling feature - requires jQuery Easing plugin
+            $(document).on('click', 'a.page-scroll', function(event) {
+                var $anchor = $(this);
+                $('html, body').stop().animate({
+                    scrollTop: ($($anchor.attr('href')).offset().top - 50)
+                }, 1250, 'easeInOutExpo');
+                event.preventDefault();
+            });
+
+            // Highlight the top nav as scrolling occurs
+            $('body').scrollspy({
+                target: '.navbar-fixed-top',
+                offset: 51
+            });
+
+            // Closes the Responsive Menu on Menu Item Click
+            $('.navbar-collapse ul li a').click(function() {
+                $('.navbar-toggle:visible').click();
+            });
+
+            // Offset for Main Navigation
+            $('#mainNav').affix({
+                offset: {
+                    top: 100
+                }
+            })
+        });
+    </script>
 </head>
 
 <body>
+
     <!--Landing-->
     <header id="landing">
         <div class="text-vertical-center parallax">
@@ -36,106 +75,51 @@
             <h2>Know Your Road.</h2>
         </div>
     </header>
-    <div id="custom-bootstrap-menu" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
-            <div class="navbar-header"><a class="navbar-brand" href="#">Brand</a>
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-            </button>
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span> <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#landing">CAR SAFETY <span class="glyphicon glyphicon-road"></span></a>
             </div>
-            <div class="collapse navbar-collapse navbar-menubuilder">
-                <ul class="nav navbar-nav navbar-left">
-                    <li><a href="/">Home</a>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" href="#home">Home</a>
                     </li>
-                    <li><a href="/products">Products</a>
+                    <li>
+                        <a class="page-scroll" href="#facts">Facts</a>
                     </li>
-                    <li><a href="/about-us">About Us</a>
+                    <li>
+                        <a class="page-scroll" href="#gallery">Tips & Tricks</a>
                     </li>
-                    <li><a href="/contact">Contact Us</a>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
                     </li>
                 </ul>
             </div>
+            <!-- /.navbar-collapse -->
         </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <div class="container" id="home">
+        <h1 id="homeH1"> Home <span class="glyphicon glyphicon-home"></span></h1>
+        <h2>Click it or Ticket</h2>
+        <h4><strong>Has your child ever asked you to get their license?</strong></h4>
+        <h4><strong>Have you been driving for a long time?</strong></h4>
+        <h4><strong>Do you or your spouse or parent drive a car?</strong></h4>
+        <p>If you answered <strong>yes</strong> to any of these questions, then you obviously are scared for your loved ones. On this site we’ll teach you tips, tricks, and stats to ensure you and others are safe on the road. </p>
     </div>
-</body>
 
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div id="custom-bootstrap-menu" class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container-fluid">
-        <div class="navbar-header"><a class="navbar-brand" href="#">Brand</a>
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-            </button>
-        </div>
-        <div class="collapse navbar-collapse navbar-menubuilder">
-            <ul class="nav navbar-nav navbar-left">
-                <li><a href="/">Home</a>
-                </li>
-                <li><a href="/products">Facts</a>
-                </li>
-                <li><a href="/about-us">About Us</a>
-                </li>
-                <li><a href="/contact">Contact Us</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<header id="facts">
-    <div class="facts">
+    <div class="container" id="facts">
         <ul>
-            <h1> Car Safety Facts</h1>
+            <h1> Car Safety Facts <span class="glyphicon glyphicon-info-sign"></span></h1>
             <h3> Here are some facts and stats about care safety</h3>
             <li>
                 <p>The safest spot in the car is the middle seat in the back</p>
@@ -154,79 +138,7 @@
             </li>
         </ul>
     </div>
-</header>
-<header id="tips and tricks">
-    <div class="tips and tricks">
-        <ul>
-            <h1> Car Tips & Tricks</h1>
-            <h2>Teens</h2>
-            <li>
-                <p>Obey the speed limits</p>
-            </li>
-            <li>
-                <p>Always wear your seat belt</p>
-            </li>
-            <li>
-                <p>Don’t drive like you own the road, drive like you own the car</p>
-            </li>
-            <li>
-                <p>Make sure your car always has gas in it</p>
-            </li>
-            <h2>Adults</h2>
-            <li>
-                <p>Don’t use your phone or any other electronic device while driving</p>
-            </li>
-            <li>
-                <p>Always wear your seatbelt and drive sober and drug-free</p>
-            </li>
-            <li>
-                <p>Keep 100% of your attention on driving at all times – no multi-tasking</p>
-            </li>
-            <li>
-                <p>Be aware of what other drivers around you are doing, and expect the unexpected</p>
-            </li>
-            <h2>Seniors</h2>
-            <li>
-                <p>Have your vision checked every 1 to 2 years. An eye doctor can treat many vision problems</p>
-            </li>
-            <li>
-                <p>Keep your windshield, mirrors, and headlights clean. Turn the brightness up on the instrument panel.</p>
-            </li>
-            <li>
-                <p>Avoid high-traffic areas if possible. Drive during the day and avoid rush hour. Find other routes with less traffic.</p>
-            </li>
-            <li>
-                <p>See your doctor if you think that pain or stiffness gets in the way of your driving</p>
-            </li>
-        </ul>
-    </div>
-</header>
-
-<div class="container">
-    <h2>Gallery</h2>
-  <div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
-
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner">
-      <div class="item active">
-        <img src="https://saferide4kids.com/wp-content/uploads/2015/09/vehicle_safety1-700x435.jpg" alt="Vehicle Safety" style="width:100%;">
-      </div>
-
-      <div class="item">
-            <img src="http://uk.itvnet.lv/article/auto/286896.jpg" alt="Safest Car in the world" style="width:100%;">
-      </div>
     
-      <div class="item">
-        <img src="https://tu9srvbirvvtmtqkbwvkaweuzwquzwrtdw5kcy1tzwrpys5jb200.g00.edmunds.com/g00/2_d3d3LmVkbXVuZHMuY29t_/TU9SRVBIRVVTMTQkaHR0cHM6Ly9tZWRpYS5lZC5lZG11bmRzLW1lZGlhLmNvbS9ub24tbWFrZS9jYXJzYWZldHkvY2Fyc2FmZXR5XzExMjgxMTFfNjAwLmpwZz9pMTBjLm1hcmsuaW1hZ2UudHlwZQ%3D%3D_$/$/$/$" alt="Car Dummy" style="width:100%;">
-      </div>
-    </div>
-
     <!-- Left and right controls -->
     <a class="left carousel-control" href="#myCarousel" data-slide="prev">
       <span class="glyphicon glyphicon-chevron-left"></span>
@@ -249,6 +161,211 @@
                 <h3>Copyright © 2017   |   CARSAFETY</h3>
             </div>
 
+
+    <div class="container" id="gallery">
+        <h2>Tips & Tricks <span class="glyphicon glyphicon-picture"></span></h2>
+            <h3>Teens</h3>
+
+            <!--                    <img src="http://www.autospies.com/images/users/Agent009/main/speed-limit-25.jpg" class="img-responsive"
+            <!--                                <p>Obey the speed limits</p>-->
+
+            <!--                    <img src="http://wvmetronews.com/wordpress/wp-content/uploads/2013/07/seat-belt.jpg" class="img-responsive">-->
+
+            <!--                                <p>Always wear your seat belt</p>-->
+            <!--                    <img src="http://blog.driversed.com/wp-content/uploads/2016/01/h-female-adult-driver-confident.jpg" class="img-responsive">-->
+
+            <!--                                <p>Don’t drive like you own the road, drive like you own the car</p>-->
+
+            <!--                    <img src="http://www.motorward.com/wp-content/images/2012/05/Fill-Up-Car.jpg" class="img-responsive"
+            <!--                                <p>Make sure your car always has gas in it</p>-->
+
+            <section class="no-padding" id="portfolio">
+                <div class="container-fluid">
+                    <div class="row no-gutter">
+                        <div class="col-sm-6">
+                            <a class="portfolio-box">
+                                <img src="../../testing-folder/startbootstrap-creative/img/portfolio/thumbnails/1.jpg" class="img-responsive" alt="">
+                                <div class="portfolio-box-caption">
+                                    <div class="portfolio-box-caption-content">
+                                        <div class="project-category text-faded">
+                                            <p>Obey the speed limits</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-sm-6">
+                            <a class="portfolio-box">
+                                <img src="../../testing-folder/startbootstrap-creative/img/portfolio/thumbnails/2.jpg" class="img-responsive" alt="">
+                                <div class="portfolio-box-caption">
+                                    <div class="portfolio-box-caption-content">
+                                        <div class="project-category text-faded">
+                                            <p>Always wear your seat belt</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-sm-6">
+                            <a class="portfolio-box">
+                                <img src="../../testing-folder/startbootstrap-creative/img/portfolio/thumbnails/3.jpg" class="img-responsive" alt="">
+                                <div class="portfolio-box-caption">
+                                    <div class="portfolio-box-caption-content">
+                                        <div class="project-category text-faded">
+                                            <p>Don’t drive like you own the road, drive like you own the car</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-sm-6">
+                            <a class="portfolio-box">
+                                <img src="../../testing-folder/startbootstrap-creative/img/portfolio/thumbnails/3.jpg" class="img-responsive" alt="">
+                                <div class="portfolio-box-caption">
+                                    <div class="portfolio-box-caption-content">
+                                        <div class="project-category text-faded">
+                                            <p>Make sure your car always has gas in it</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <h3>Adults</h3>
+            <section class="no-padding" id="portfolio">
+                <div class="container-fluid">
+                    <div class="row no-gutter">
+                        <div class="col-sm-6">
+                            <a class="portfolio-box">
+                                <img src="../../testing-folder/startbootstrap-creative/img/portfolio/thumbnails/1.jpg" class="img-responsive" alt="">
+                                <div class="portfolio-box-caption">
+                                    <div class="portfolio-box-caption-content">
+                                        <div class="project-category text-faded">
+                                            <p>Don’t use your phone or any other electronic device while driving</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-sm-6">
+                            <a class="portfolio-box">
+                                <img src="../../testing-folder/startbootstrap-creative/img/portfolio/thumbnails/2.jpg" class="img-responsive" alt="">
+                                <div class="portfolio-box-caption">
+                                    <div class="portfolio-box-caption-content">
+                                        <div class="project-category text-faded">
+                                            <li>
+                                                <p>Always wear your seatbelt and drive sober and drug-free</p>
+                                            </li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-sm-6">
+                            <a class="portfolio-box">
+                                <img src="../../testing-folder/startbootstrap-creative/img/portfolio/thumbnails/3.jpg" class="img-responsive" alt="">
+                                <div class="portfolio-box-caption">
+                                    <div class="portfolio-box-caption-content">
+                                        <div class="project-category text-faded">
+                                            <p>Keep 100% of your attention on driving at all times – no multi-tasking</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-sm-6">
+                            <a class="portfolio-box">
+                                <img src="../../testing-folder/startbootstrap-creative/img/portfolio/thumbnails/3.jpg" class="img-responsive" alt="">
+                                <div class="portfolio-box-caption">
+                                    <div class="portfolio-box-caption-content">
+                                        <div class="project-category text-faded">
+                                            <p>Make sure your car always has gas in it</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <h3>Seniors</h3>
+            <section class="no-padding" id="portfolio">
+                <div class="container-fluid">
+                    <div class="row no-gutter">
+                        <div class="col-sm-6">
+                            <a class="portfolio-box">
+                                <img src="../../testing-folder/startbootstrap-creative/img/portfolio/thumbnails/1.jpg" class="img-responsive" alt="">
+                                <div class="portfolio-box-caption">
+                                    <div class="portfolio-box-caption-content">
+                                        <div class="project-category text-faded">
+                                            <p>Have your vision checked every 1 to 2 years. An eye doctor can treat many vision problems</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-sm-6">
+                            <a class="portfolio-box">
+                                <img src="../../testing-folder/startbootstrap-creative/img/portfolio/thumbnails/2.jpg" class="img-responsive" alt="">
+                                <div class="portfolio-box-caption">
+                                    <div class="portfolio-box-caption-content">
+                                        <div class="project-category text-faded">
+                                            <li>
+                                                <p>Keep your windshield, mirrors, and headlights clean. Turn the brightness up on the instrument panel.</p>
+                                            </li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-sm-6">
+                            <a class="portfolio-box">
+                                <img src="../../testing-folder/startbootstrap-creative/img/portfolio/thumbnails/3.jpg" class="img-responsive" alt="">
+                                <div class="portfolio-box-caption">
+                                    <div class="portfolio-box-caption-content">
+                                        <div class="project-category text-faded">
+                                            <p>Avoid high-traffic areas if possible. Drive during the day and avoid rush hour. Find other routes with less traffic.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-sm-6">
+                            <a class="portfolio-box">
+                                <img src="../../testing-folder/startbootstrap-creative/img/portfolio/thumbnails/3.jpg" class="img-responsive" alt="">
+                                <div class="portfolio-box-caption">
+                                    <div class="portfolio-box-caption-content">
+                                        <div class="project-category text-faded">
+                                            <p>See your doctor if you think that pain or stiffness gets in the way of your driving</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    </div>
+
+    <footer id="contacts">
+        <div class="container" id="contact">
+            <h2 class="contacts">Contact Us<span class="glyphicon glyphicon-phone"></span></h2>
+            <h4>Want more info? Have any questions?</h4>
+            <div class="col-sm-6">
+                <p class="contacts address">Car Safety.Inc.</p>
+                <p class="contacts address"><span class="	glyphicon glyphicon-map-marker"></span> 2468 Car Lane</p>
+                <p class="contacts address">Somewhere, DR 90211</p>
+            </div>
+            <div class="col-sm-6">
+                <p class="contacts number"> Phone <span class="glyphicon glyphicon glyphicon-earphone"></span>: 1 (800) CAR-SAFE </p>
+            </div>
+        </div>
+    </footer>
+    <div class="container-fluid" id="copyright">
+        <p><strong>Copyright © 2017 | CARSAFETY</strong></p>
+    </div>
 
 </body>
 
