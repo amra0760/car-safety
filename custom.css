@@ -50,6 +50,7 @@ body {
         font-size: 40px;
     }
 }
+
 @media (min-width: 1200px) {
     #landing h1 {
         font-size: 48px;
@@ -58,6 +59,7 @@ body {
         font-size: 45px;
     }
 }
+
 .container {
     background-color: #FFD7B1;
     margin: 10px auto;
@@ -67,25 +69,36 @@ body {
 #home h1 {
     text-align: left;
 }
-#gallery{
+#home p {
+    font-size: 15px;
+}
+
+#gallery {
     margin: 10px 0px;
     width: 100%;
 }
-#contact{
+
+#contact {
     margin: 10 auto 0px;
 }
-.contact{
+
+.contacts {
     text-align: center;
 }
-.address{
+
+.address {
     font-size: 20px;
     text-align: center;
+    font-weight: bold;
 }
-.number{
+
+.number {
     font-size: 20px;
     vertical-align: middle;
+    font-weight: bold;
 }
-#copyright{
+
+#copyright {
     text-align: center;
     background-color: #C9C5C2;
     margin-top: 0px;
