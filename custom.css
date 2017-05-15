@@ -69,8 +69,105 @@ body {
 #home h1 {
     text-align: left;
 }
-#home p {
-    font-size: 15px;
+
+#home h4 {
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    #home h1 {
+        font-size: 28px;
+    }
+    #home h2 {
+        font-size: 25px;
+    }
+    #home h4,
+    #home p,
+    #break p {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 992px) {
+    #home h1 {
+        font-size: 30px;
+    }
+    #home h2 {
+        font-size: 27px;
+    }
+    #home h4,
+    #home p,
+    #break p {
+        font-size: 17px;
+    }
+}
+
+@media (min-width: 1200px) {
+    #home h1 {
+        font-size: 33px;
+    }
+    #home h2 {
+        font-size: 31px;
+    }
+    #home h4,
+    #home p,
+    #break p {
+        font-size: 20px;
+    }
+}
+
+#break {
+    height: 30px;
+    background-color: black;
+    margin: 10px 0;
+}
+
+#break p {
+    color: white;
+    text-align: center;
+}
+
+#facts {
+    background-color: #F2E8DA;
+}
+
+@media (max-width: 768px) {
+    #facts h1 {
+        font-size: 28px;
+    }
+    #facts h2,
+    #gallery h3 {
+        font-size: 25px;
+    }
+    #facts p {
+        font-size: 17px;
+    }
+}
+
+@media (min-width: 992px) {
+    #facts h1 {
+        font-size: 30px;
+    }
+    #facts h2,
+    #gallery h3 {
+        font-size: 27px;
+    }
+    #facts p {
+        font-size: 19px;
+    }
+}
+
+@media (min-width: 1200px) {
+    #facts h1 {
+        font-size: 33px;
+    }
+    #facts h2,
+    #gallery h3 {
+        font-size: 31px;
+    }
+    #facts p {
+        font-size: 21px;
+    }
 }
 
 #gallery {
@@ -80,6 +177,7 @@ body {
 
 #contact {
     margin: 10 auto 0px;
+    background-color: #FFD7C7;
 }
 
 .contacts {
@@ -96,6 +194,45 @@ body {
     font-size: 20px;
     vertical-align: middle;
     font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .address,
+    .number {
+        font-size: 20px;
+    }
+    #contactH2 {
+        font-size: 24px;
+    }
+    #contactH4 {
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 992px) {
+    .address,
+    .number {
+        font-size: 22px;
+    }
+    #contactH2 {
+        font-size: 26px;
+    }
+    #contactH4 {
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .address,
+    .number {
+        font-size: 24px;
+    }
+    #contactH2 {
+        font-size: 28px;
+    }
+    #contactH4 {
+        font-size: 26px;
+    }
 }
 
 #copyright {
