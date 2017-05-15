@@ -41,14 +41,7 @@ body {
         font-size: 30px;
     }
 }
-@media (min-width: 768px) {
-    #landing h1 {
-        font-size: 40px;
-    }
-    #landing h2 {
-        font-size: 35px;
-    }
-}
+
 @media (min-width: 992px) {
     #landing h1 {
         font-size: 45px;
