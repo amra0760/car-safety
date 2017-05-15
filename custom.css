@@ -11,7 +11,7 @@ body {
 }
 
 .parallax {
-    background-image: linear-gradient( rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.5)), url("https://www.brandwise.co.uk/images/Dollarphotoclub_96527092.jpg");
+    background-image: linear-gradient( rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.5)), url("img/landing.jpg");
     width: 100%;
     background-attachment: fixed;
     background-position: center;
