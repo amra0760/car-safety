@@ -29,65 +29,113 @@ body {
 #landing h1,
 #landing h2 {
     color: white;
-    font-family: 'Erica One', cursive;
+}
+
+#landing h1 {
+    font-family: 'baloo';
     font-weight: bold;
 }
 
+#landing h2 {
+    font-family: 'Damion', cursive;
+    font-style: italic;
+}
+
+
+/*x-small*/
 @media (max-width: 768px) {
     #landing h1 {
-        font-size: 35px;
+        font-size: 55px;
     }
     #landing h2 {
-        font-size: 30px;
+        font-size: 35px;
     }
 }
 
-@media (min-width: 992px) {
+
+/*small*/
+@media (min-width: 768px) {
     #landing h1 {
-        font-size: 45px;
+        font-size: 60px;
     }
     #landing h2 {
         font-size: 40px;
     }
 }
 
-@media (min-width: 1200px) {
+
+/*Medium*/
+
+@media (min-width: 992px) {
     #landing h1 {
-        font-size: 48px;
+        font-size: 65px;
     }
     #landing h2 {
         font-size: 45px;
     }
 }
 
+
+/*Large*/
+@media (min-width: 1200px) {
+    #landing h1 {
+        font-size: 70px;
+    }
+    #landing h2 {
+        font-size: 50px;
+    }
+}
+
 .container {
     background-color: #FFD7B1;
     margin: 10px auto;
-    padding: 0 20 10px;
+    padding: 0 20 50px;
 }
 
 #home h1 {
     text-align: left;
 }
 
+#home h2 {
+    font-style: italic;
+}
+
 #home h4 {
     font-weight: bold;
 }
 
+
+/*x-small*/
 @media (max-width: 768px) {
     #home h1 {
-        font-size: 28px;
+        font-size: 30px;
     }
     #home h2 {
-        font-size: 25px;
+        font-size: 24px;
     }
     #home h4,
-    #home p,
-    #break p {
-        font-size: 15px;
+    #home p {
+        font-size: 16px;
     }
 }
 
+
+/*small*/
+@media (min-width: 768px) {
+    #home h1 {
+        font-size: 29px;
+    }
+    #home h2 {
+        font-size: 26px;
+    }
+    #home h4,
+    #home p {
+        font-size: 17px;
+    }
+}
+
+
+/*Medium*/
 @media (min-width: 992px) {
     #home h1 {
         font-size: 30px;
@@ -96,12 +144,13 @@ body {
         font-size: 27px;
     }
     #home h4,
-    #home p,
-    #break p {
-        font-size: 17px;
+    #home p {
+        font-size: 18px;
     }
 }
 
+
+/*Large*/
 @media (min-width: 1200px) {
     #home h1 {
         font-size: 33px;
@@ -110,43 +159,56 @@ body {
         font-size: 31px;
     }
     #home h4,
-    #home p,
-    #break p {
-        font-size: 20px;
+    #home p {
+        font-size: 21px;
     }
 }
 
 #break {
-    height: 30px;
+    /*height: 30px;*/
     background-color: black;
     margin: auto;
     text-align: center;
     color: white;
-    
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-weight: bold;
 }
 
+/*x-small*/
 @media (max-width: 768px) {
     #break p {
         font-size: 17px;
     }
 }
 
-@media (min-width: 992px) {
+/*small*/
+@media (min-width: 768px) {
     #break p {
         font-size: 18px;
     }
 }
 
-@media (min-width: 1200px) {
+
+/*Medium*/
+@media (min-width: 992px) {
     #break p {
         font-size: 19px;
+    }
+}
+
+
+/*Large*/
+@media (min-width: 1200px) {
+    #break p {
+        font-size: 21px;
     }
 }
 
 #facts {
     background-color: #F2E8DA;
 }
-
+/*x-small*/
 @media (max-width: 768px) {
     #facts h1 {
         font-size: 28px;
@@ -160,6 +222,21 @@ body {
     }
 }
 
+/*small*/
+@media (min-width: 768px) {
+    #facts h1 {
+        font-size: 29px;
+    }
+    #facts h2,
+    #gallery h3 {
+        font-size: 26px;
+    }
+    #facts p {
+        font-size: 18px;
+    }
+}
+
+/*Medium*/
 @media (min-width: 992px) {
     #facts h1 {
         font-size: 30px;
@@ -173,6 +250,7 @@ body {
     }
 }
 
+/*Large*/
 @media (min-width: 1200px) {
     #facts h1 {
         font-size: 33px;
@@ -212,6 +290,7 @@ body {
     font-weight: bold;
 }
 
+/*X-Small*/
 @media (max-width: 768px) {
     .address,
     .number {
@@ -225,6 +304,21 @@ body {
     }
 }
 
+/*small*/
+@media (min-width: 768px) {
+    .address,
+    .number {
+        font-size: 21px;
+    }
+    #contactH2 {
+        font-size: 25px;
+    }
+    #contactH4 {
+        font-size: 2px;
+    }
+}
+
+/*Medium*/
 @media (min-width: 992px) {
     .address,
     .number {
@@ -238,6 +332,7 @@ body {
     }
 }
 
+/*Large*/
 @media (min-width: 1200px) {
     .address,
     .number {
@@ -255,4 +350,9 @@ body {
     text-align: center;
     background-color: #C9C5C2;
     margin-top: 0px;
+}
+
+.margin {
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
